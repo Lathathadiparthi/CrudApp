@@ -1,0 +1,57 @@
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+             id="name" 
+            required
+            [(ngModel)]="User.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            class="form-control"
+             id="email" 
+            required
+            [(ngModel)]="User.email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input
+            class="form-control"
+             id="city" 
+            required
+            [(ngModel)]="User.city"
+            name="city"
+          />
+        </div>
+        <div class="form-group">
+          <label for="company_name">Company_Name</label>
+          <input
+            class="form-control"
+             id="company_name" 
+            required
+            [(ngModel)]="User.company_name"
+            name="company_name"
+          />
+        </div>  
+  
+        <button (click)="AddUser()" class="btn btn-success">Add</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>User Successfully Added</h3>
+        <button class="btn btn-success" (click)="newProduct()">New..</button>
+      </div>
+    </div>
+  </div>
+  
+  
